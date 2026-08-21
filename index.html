@@ -1,14 +1,149 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-     <h2>Mi primer codigo</h2>
-    </title>
-  </head>
-  <body>
-    <h5>
-    My name is Angel Josue Aguilar Tepole
-    Future CEO of Google
-      </h5>
-  </body>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página web de tecnología">
+    <meta name="author" content="Angel">
+    <title>TechWorld</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>TechWorld</h1>
+        <p>Todo sobre tecnología y programación</p>
+
+        <nav>
+            <a href="#inicio">Inicio</a> |
+            <a href="#programacion">Programación</a> |
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <section id="inicio">
+            <h2>Bienvenido a TechWorld</h2>
+
+            <p>
+                En esta página encontrarás información sobre
+                programación, computadoras y tecnología.
+            </p>
+
+            <figure>
+                <img src="https://via.placeholder.com/400x200"
+                     alt="Tecnología">
+                <figcaption>La tecnología del futuro</figcaption>
+            </figure>
+        </section>
+
+        <section id="programacion">
+
+            <h2>Lenguajes de programación</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Lenguaje</th>
+                        <th>Nivel</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Básico</td>
+                        <td>Páginas web</td>
+                    </tr>
+
+                    <tr>
+                        <td>Java</td>
+                        <td>Intermedio</td>
+                        <td>Aplicaciones</td>
+                    </tr>
+
+                    <tr>
+                        <td>C++</td>
+                        <td>Avanzado</td>
+                        <td>Software</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section>
+
+            <h2>¿Qué lenguaje te interesa?</h2>
+
+            <form>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <br><br>
+
+                <label for="lenguaje">Lenguaje:</label>
+
+                <select id="lenguaje" name="lenguaje">
+                    <option>HTML</option>
+                    <option>Java</option>
+                    <option>C++</option>
+                    <option>Python</option>
+                </select>
+
+                <br><br>
+
+                <label for="comentario">Comentario:</label>
+                <br>
+
+                <textarea id="comentario"
+                          name="comentario"
+                          rows="5"
+                          cols="40"></textarea>
+
+                <br><br>
+
+                <input type="submit" value="Enviar">
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <details>
+                <summary>¿Qué es HTML?</summary>
+                <p>
+                    HTML es el lenguaje utilizado para estructurar
+                    páginas web.
+                </p>
+            </details>
+
+            <details>
+                <summary>¿HTML es un lenguaje de programación?</summary>
+                <p>
+                    No. HTML es un lenguaje de marcado.
+                </p>
+            </details>
+
+        </section>
+
+    </main>
+
+    <hr>
+
+    <footer id="contacto">
+        <h3>Contacto</h3>
+        <p>Correo: contacto@techworld.com</p>
+        <p>&copy; 2026 TechWorld</p>
+    </footer>
+
+</body>
 </html>
