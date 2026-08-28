@@ -1,18 +1,680 @@
-<html>
-    <body>
-        <p> header </p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<p> Experiencia laboral</p>
+<title>Angel Josue Aguilar Tepole - CV</title>
 
-<p> Educacion </p>
+<style>
 
-<p> Habilidades </p>
+*{
+    box-sizing:border-box;
+}
 
-<p> Certificaciones </p>
+body{
+    margin:0;
+    background:#202020;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+}
 
-<p> Idiomas </p>
+.cv{
+    width:900px;
+    max-width:95%;
+    margin:35px auto;
+    background:white;
+    padding:30px 45px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
 
-<p> Intereses </p>
+/* HEADER */
 
-    </body>
+.header{
+    display:grid;
+    grid-template-columns:1fr 150px 1fr;
+    align-items:center;
+    gap:25px;
+    padding-bottom:25px;
+    border-bottom:2px solid #e74747;
+}
+
+.name{
+    font-size:38px;
+    font-weight:500;
+    margin:0 0 20px;
+}
+
+.description{
+    font-size:11px;
+    line-height:1.4;
+}
+
+.photo{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid #222;
+    margin:auto;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.contact{
+    text-align:right;
+    font-size:11px;
+    line-height:2.3;
+}
+
+.contact span{
+    color:#e74747;
+    font-weight:bold;
+}
+
+/* COLUMNAS */
+
+.columns{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:45px;
+    padding-top:25px;
+}
+
+h2{
+    font-size:22px;
+    margin:0 0 20px;
+}
+
+/* EXPERIENCIA */
+
+.job{
+    position:relative;
+    margin-bottom:25px;
+}
+
+.job::before{
+    content:"";
+    position:absolute;
+    left:-45px;
+    top:0;
+    width:35px;
+    height:55px;
+    background:#f33f46;
+}
+
+.date{
+    color:#df5a5a;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.place{
+    float:right;
+    color:#df5a5a;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.job-title{
+    font-size:17px;
+    font-weight:bold;
+    margin-top:3px;
+}
+
+.company{
+    font-size:15px;
+    margin-top:3px;
+}
+
+.label{
+    color:#df5a5a;
+    font-size:9px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.text{
+    font-size:10.5px;
+    line-height:1.35;
+}
+
+/* EDUCATION */
+
+.education{
+    margin-top:20px;
+}
+
+.edu{
+    position:relative;
+    margin-bottom:25px;
+}
+
+.edu::before{
+    content:"";
+    position:absolute;
+    left:-45px;
+    top:0;
+    width:35px;
+    height:50px;
+    background:#f33f46;
+}
+
+.degree{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.school{
+    font-size:14px;
+    margin-top:4px;
+}
+
+/* SKILLS */
+
+.skill{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:15px;
+    align-items:center;
+    margin-bottom:14px;
+}
+
+.skill-name{
+    text-align:right;
+    font-size:11px;
+}
+
+.bar{
+    height:18px;
+    border:1px solid #e74747;
+}
+
+.fill{
+    height:100%;
+    background:#ed4148;
+}
+
+.full{
+    width:100%;
+}
+
+.high{
+    width:92%;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements{
+    margin-top:40px;
+}
+
+.achievement{
+    margin-bottom:15px;
+}
+
+.achievement b{
+    font-size:11px;
+}
+
+.achievement p{
+    font-size:9.5px;
+    line-height:1.3;
+    margin:3px 0;
+}
+
+/* LANGUAGES */
+
+.small-title{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:25px;
+    margin-bottom:12px;
+}
+
+.languages{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    padding-right:30px;
+}
+
+/* INTERESTS */
+
+.interests{
+    font-size:11px;
+    line-height:2;
+}
+
+/* LOGO */
+
+.logo{
+    text-align:right;
+    margin-top:35px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:750px){
+
+    .cv{
+        padding:25px;
+    }
+
+    .header{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .contact{
+        text-align:center;
+    }
+
+    .columns{
+        grid-template-columns:1fr;
+    }
+
+    .description{
+        max-width:500px;
+        margin:auto;
+    }
+
+    .place{
+        float:none;
+        display:block;
+        margin-top:3px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cv">
+
+<!-- HEADER -->
+
+<header class="header">
+
+    <div>
+
+        <h1 class="name">
+            Angel Josue Aguilar Tepole
+        </h1>
+
+        <div class="description">
+
+            Estudiante de Ingeniería de Software con pensamiento crítico,
+            buena lógica y mucha actitud e imaginación, en busca de
+            oportunidades para crecer profesionalmente y aportar en un
+            buen ambiente de trabajo.
+
+        </div>
+
+    </div>
+
+
+    <div class="photo">
+
+        <img src="perfil.jpg" alt="Angel Josue Aguilar Tepole">
+
+    </div>
+
+
+    <div class="contact">
+
+        zs26004562@estudiantes.uv.mx
+        <span>✉️</span>
+        <br>
+
+        272 109 1155
+        <span>☎️</span>
+        <br>
+
+        Rio Blanco, México
+        <span>⌖</span>
+
+    </div>
+
+</header>
+
+
+<!-- COLUMNAS -->
+
+<main class="columns">
+
+
+<!-- COLUMNA IZQUIERDA -->
+
+<section>
+
+<h2>
+    Experiencia Laboral
+</h2>
+
+
+<!-- VENDEDOR -->
+
+<div class="job">
+
+    <div class="date">
+        Experiencia
+    </div>
+
+    <div class="job-title">
+        Vendedor de productos
+    </div>
+
+    <div class="label">
+        Logros
+    </div>
+
+    <div class="text">
+
+        Atención al cliente y venta directa de productos,
+        desarrollando habilidades de comunicación y buen trato
+        con las personas.
+
+    </div>
+
+</div>
+
+
+<!-- APOYO ESCOLAR -->
+
+<div class="job">
+
+    <div class="date">
+        Experiencia
+    </div>
+
+    <div class="job-title">
+        Apoyo en tareas de cómputo
+    </div>
+
+    <div class="label">
+        Logros
+    </div>
+
+    <div class="text">
+
+        Ayuda a compañeros y familiares con el uso básico de
+        computadoras, instalación de programas y resolución de
+        problemas sencillos de software.
+
+    </div>
+
+</div>
+
+
+<!-- EDUCATION -->
+
+<div class="education">
+
+<h2>
+    Educación
+</h2>
+
+
+<div class="edu">
+
+    <div class="date">
+        Actualidad
+    </div>
+
+    <div class="degree">
+        Ingeniería de Software
+    </div>
+
+    <div class="school">
+        Universidad Veracruzana — Primer Semestre
+    </div>
+
+</div>
+
+
+<div class="edu">
+
+    <div class="date">
+        Bachillerato
+    </div>
+
+    <div class="degree">
+        Preparatoria
+    </div>
+
+    <div class="school">
+        Escuela Preparatoria — Río Blanco
+    </div>
+
+</div>
+
+
+<div class="edu">
+
+    <div class="date">
+        Secundaria
+    </div>
+
+    <div class="degree">
+        Educación Secundaria
+    </div>
+
+    <div class="school">
+        Escuela Secundaria — Río Blanco
+    </div>
+
+</div>
+
+
+<div class="edu">
+
+    <div class="date">
+        Primaria
+    </div>
+
+    <div class="degree">
+        Educación Primaria
+    </div>
+
+    <div class="school">
+        Escuela Primaria — Río Blanco
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COLUMNA DERECHA -->
+
+<aside>
+
+<h2>
+    Habilidades y Competencias
+</h2>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Pensamiento crítico
+    </div>
+
+    <div class="bar">
+        <div class="fill full"></div>
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Buena lógica
+    </div>
+
+    <div class="bar">
+        <div class="fill full"></div>
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Actitud e imaginación
+    </div>
+
+    <div class="bar">
+        <div class="fill high"></div>
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Buen ambiente
+    </div>
+
+    <div class="bar">
+        <div class="fill high"></div>
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Trabajo en equipo
+    </div>
+
+    <div class="bar">
+        <div class="fill high"></div>
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Responsabilidad
+    </div>
+
+    <div class="bar">
+        <div class="fill full"></div>
+    </div>
+
+</div>
+
+
+<div class="skill">
+
+    <div class="skill-name">
+        Adaptabilidad
+    </div>
+
+    <div class="bar">
+        <div class="fill high"></div>
+    </div>
+
+</div>
+
+
+<!-- ACHIEVEMENTS -->
+
+<div class="achievements">
+
+<h2>
+    Logros y Certificados
+</h2>
+
+
+<div class="achievement">
+
+<b>
+Nadador
+</b>
+
+</div>
+
+
+<div class="achievement">
+
+<b>
+Patinador
+</b>
+
+</div>
+
+
+<div class="achievement">
+
+<b>
+Participante en taller escolar de introducción a la programación
+</b>
+
+</div>
+
+</div>
+
+
+<!-- LANGUAGES -->
+
+<div class="small-title">
+    Idiomas
+</div>
+
+<div class="languages">
+
+    <span>Inglés</span>
+
+    <span>Español (nativo)</span>
+
+</div>
+
+
+<!-- INTERESTS -->
+
+<div class="small-title">
+    Intereses
+</div>
+
+<div class="interests">
+
+    Videojuegos |
+    Edición |
+    Programación
+
+</div>
+
+
+<div class="logo">
+    novoresume.com
+</div>
+
+
+</aside>
+
+</main>
+
+</div>
+
+</body>
 </html>
